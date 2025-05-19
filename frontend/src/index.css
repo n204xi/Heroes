@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(135deg, #0a2342 0%, #274472 100%);
+  color: #4fc3f7;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  letter-spacing: 1.1px;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(79,195,247,0.04) 0px,
+      rgba(79,195,247,0.04) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+.cyber-panel {
+  background: rgba(10, 35, 66, 0.85);
+  border: 2px solid #4fc3f7;
+  border-radius: 18px;
+  box-shadow: 0 0 24px #4fc3f7, 0 0 8px #0a2342;
+  padding: 18px 24px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.cyber-input, input, textarea {
+  background: rgba(79,195,247,0.08);
+  border: 2px solid #4fc3f7;
+  color: #4fc3f7;
+  font-family: inherit;
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+  margin-right: 8px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.cyber-input:focus, input:focus, textarea:focus {
+  border: 2px solid #1976d2;
+}
+
+.cyber-btn, button {
+  background: linear-gradient(90deg, #1976d2 0%, #4fc3f7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 10px 22px;
+  box-shadow: 0 0 8px #4fc3f7;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cyber-btn:hover, button:hover {
+  background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+  color: #fff;
+}
+
+.typing-indicator {
+  color: #4fc3f7;
+  font-style: italic;
+  margin: 8px 0 0 8px;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to { opacity: 0.3; }
+}
