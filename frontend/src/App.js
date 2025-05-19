@@ -22,7 +22,7 @@ function App() {
     formData.append("message", text);
     formData.append("character", character);
 
-    const res = await fetch("http://localhost:8000/chat/message", {
+    const res = await fetch("https://heroes-backend.onrender.com/chat/message", {
       method: "POST",
       body: formData,
     });
@@ -34,7 +34,7 @@ function App() {
     ]);
     setIsTyping(false);
     if (data.audio_url) {
-      const audio = new Audio("http://localhost:8000" + data.audio_url);
+      const audio = new Audio("https://heroes-backend.onrender.com" + data.audio_url);
       audio.play();
     }
     if ("Notification" in window && Notification.permission === "granted") {
