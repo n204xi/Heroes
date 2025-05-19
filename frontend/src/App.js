@@ -3,7 +3,7 @@ import ChatWindow from "./components/ChatWindow";
 import MessageInput from "./components/MessageInput";
 import CharacterSelect from "./components/CharacterSelect";
 import "./App.css";
-import "./utils/MobilePolish.css";
+import "./components/MobilePolish.css";
 
 function App() {
   const [messages, setMessages] = useState([]);
