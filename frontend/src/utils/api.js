@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://heroes-backend.onrender.com'; // Production backend URL
+// Use your Fly.io backend URL for production
+const API_BASE_URL = 'https://backend-summer-smoke-1931.fly.dev';
 
 export const sendMessage = async (message) => {
     try {
@@ -68,3 +69,6 @@ export async function fetchProfilePic(character) {
   const res = await fetch(`https://heroes-backend.onrender.com/profile/profile_pic?character=${encodeURIComponent(character)}`);
   return await res.json();
 }
+
+// TODO: Ensure all API calls handle errors gracefully and display user-friendly messages
+// TODO: Use environment variables for API URLs and secrets; never commit sensitive keys
