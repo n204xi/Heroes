@@ -24,3 +24,5 @@ The database schema is defined in the `schema.sql` file located in this director
 The database is accessed through the backend application, which handles all interactions with the stored data. Ensure that the backend services are running to enable communication with the database.
 
 For more detailed information on how to interact with the database through the backend, refer to the backend documentation.
+
+# NOTE: The backend uses MongoDB (NoSQL), not SQL. See backend/README.md for details.

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Request
-from src.db import db
+from src.services.db import db
 
 router = APIRouter()
 

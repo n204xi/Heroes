@@ -1,7 +1,7 @@
 import os
 import shutil
 from fastapi import APIRouter, UploadFile, File, Form
-from src.db import db
+from src.services.db import db
 
 router = APIRouter()
 

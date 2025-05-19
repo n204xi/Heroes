@@ -1,3 +1,5 @@
+# NOTE: This project uses MongoDB, not SQL. This file is not used by the backend and can be deleted.
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,

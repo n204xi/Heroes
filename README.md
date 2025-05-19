@@ -118,3 +118,19 @@ Feel free to submit issues or pull requests to improve the project.
 ## License
 
 This project is licensed under the MIT License.
+
+# Updated: This project uses FastAPI (not Flask) and MongoDB (not SQL).
+#
+# TODOs for workspace consistency and best practices:
+# - Remove duplicate requirements.txt in backend/src/ if present; use only backend/requirements.txt
+# - Expand backend/tests/test_app.py to cover all routes and error cases
+# - Apply error handling and validation patterns from chat.py to all backend route files
+# - Clean up unused dependencies in requirements.txt and frontend/package.json
+# - Add .env to .gitignore if not already present
+# - Remove or update database/schema.sql to clarify MongoDB is used
+# - Update database/README.md to clarify MongoDB is used, not SQL
+# - Add root-level README.md with project structure and setup instructions
+# - Ensure frontend/src/utils/api.js handles API errors gracefully
+# - Remove unused files and code in frontend/src/components/
+# - Use environment variables for API URLs and secrets in frontend
+# - Regularly audit .gitignore and secrets handling

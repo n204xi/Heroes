@@ -1,7 +1,7 @@
 import os
 import json
 from fastapi import APIRouter, UploadFile, File, Form
-from src.db import db
+from src.services.db import db
 
 router = APIRouter()
 PROFILE_PICS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../profile_pics'))

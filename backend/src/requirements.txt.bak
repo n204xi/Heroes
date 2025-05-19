@@ -1,0 +1,10 @@
+# Backup of src/requirements.txt before removal
+fastapi
+uvicorn
+python-dotenv
+requests
+openai
+motor
+python-dotenv
+apscheduler
+pytest

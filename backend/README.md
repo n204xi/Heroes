@@ -1,6 +1,6 @@
 # AI Friend Chatbot Backend
 
-This document provides an overview of the backend setup for the AI Friend Chatbot project. The backend is built using Python and Flask, and it integrates with the OpenAI and ElevenLabs APIs to provide a conversational AI experience.
+This document provides an overview of the backend setup for the AI Friend Chatbot project. The backend is built using Python and FastAPI, and it integrates with the OpenAI and ElevenLabs APIs to provide a conversational AI experience.
 
 ## Project Structure
 
@@ -9,7 +9,7 @@ The backend is organized as follows:
 ```
 backend/
 ├── src/
-│   ├── app.py                # Main entry point for the Flask application
+│   ├── app.py                # Main entry point for the FastAPI application
 │   ├── routes/               # Contains route definitions
 │   │   ├── chat.py           # Handles chat-related routes
 │   │   ├── files.py          # Manages file uploads and downloads
@@ -64,3 +64,11 @@ Refer to the individual route files for detailed API specifications.
 - The backend is designed to work seamlessly with the frontend application, which can be found in the `frontend` directory.
 
 For further assistance, please refer to the documentation in the `frontend` and `database` directories.
+
+# TODOs
+
+- Update this README to reference FastAPI, not Flask
+- Ensure requirements.txt is only in backend/, not duplicated in src/
+- Expand test coverage in backend/tests/
+- Add .env to .gitignore if not present
+- Apply error handling and validation patterns from chat.py to all backend route files

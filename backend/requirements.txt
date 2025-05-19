@@ -6,3 +6,4 @@ openai
 motor
 python-dotenv
 apscheduler
+python-multipart
