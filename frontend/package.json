@@ -1,0 +1,24 @@
+{
+  "name": "ai-friend-chatbot",
+  "version": "1.0.0",
+  "description": "A chatbot application that uses AI to interact with users and provides voice responses.",
+  "main": "src/App.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.27.0"
+  },
+  "homepage": "http://localhost:3000",
+  "license": "MIT"
+}
