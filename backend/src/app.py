@@ -5,6 +5,7 @@ from src.routes.history import router as history_router
 from src.routes.profile import router as profile_router
 from apscheduler.schedulers.background import BackgroundScheduler
 from src.db import db
+from fastapi.middleware.cors import CORSMiddleware
 import os
 
 app = FastAPI()
@@ -37,4 +38,12 @@ scheduler.add_job(send_proactive_message, "interval", hours=1)
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the AI Friend Chatbot API!"}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://your-frontend.onrender.com"],  # <-- Replace with your actual frontend Render URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 

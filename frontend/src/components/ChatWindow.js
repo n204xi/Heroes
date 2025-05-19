@@ -51,7 +51,7 @@ const ChatWindow = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await fetch("http://localhost:8000/chat/upload", {
+        const res = await fetch("https://heroes-backend.onrender.com/chat/upload", {
             method: "POST",
             body: formData,
         });
@@ -61,7 +61,7 @@ const ChatWindow = () => {
             {
                 text: `[File uploaded: ${file.name}]`,
                 from: "user",
-                fileUrl: data.fileUrl ? "http://localhost:8000" + data.fileUrl : undefined,
+                fileUrl: data.fileUrl ? "https://heroes-backend.onrender.com" + data.fileUrl : undefined,
                 fileType: data.fileType,
                 fileName: data.fileName
             },
@@ -73,7 +73,7 @@ const ChatWindow = () => {
             }
         ]);
         if (data.audio_url) {
-            const audio = new Audio("http://localhost:8000" + data.audio_url);
+            const audio = new Audio("https://heroes-backend.onrender.com" + data.audio_url);
             audio.play();
         }
     };
@@ -109,7 +109,7 @@ const ChatWindow = () => {
             <div style={{ display: "flex", alignItems: "center", marginBottom: 10 }}>
                 {profilePic && (
                     <img
-                        src={`http://localhost:8000${profilePic}`}
+                        src={`https://heroes-backend.onrender.com${profilePic}`}
                         alt="Profile"
                         style={{ width: 48, height: 48, borderRadius: "50%", marginRight: 10, objectFit: "cover" }}
                     />
@@ -156,7 +156,7 @@ const ChatWindow = () => {
                             </a>
                         )}
                         {msg.audio && (
-                            <audio controls src={msg.audio.startsWith("http") ? msg.audio : "http://localhost:8000" + msg.audio} style={{ display: "block", margin: "4px 0" }} />
+                            <audio controls src={msg.audio.startsWith("http") ? msg.audio : "https://heroes-backend.onrender.com" + msg.audio} style={{ display: "block", margin: "4px 0" }} />
                         )}
                     </div>
                 ))}

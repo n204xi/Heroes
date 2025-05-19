@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000'; // Adjust the base URL as needed
+const API_BASE_URL = 'https://heroes-backend.onrender.com'; // Production backend URL
 
 export const sendMessage = async (message) => {
     try {
@@ -40,13 +40,13 @@ export const getNotifications = async () => {
 };
 
 export async function fetchMessages() {
-  const res = await fetch("http://localhost:8000/chat/history");
+  const res = await fetch("https://heroes-backend.onrender.com/chat/history");
   if (!res.ok) return [];
   return await res.json();
 }
 
 export async function saveMessage(message) {
-  await fetch("http://localhost:8000/chat/history", {
+  await fetch("https://heroes-backend.onrender.com/chat/history", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(message),
@@ -57,7 +57,7 @@ export async function uploadProfilePic(character, file) {
   const formData = new FormData();
   formData.append("character", character);
   formData.append("file", file);
-  const res = await fetch("http://localhost:8000/profile/upload_profile_pic", {
+  const res = await fetch("https://heroes-backend.onrender.com/profile/upload_profile_pic", {
     method: "POST",
     body: formData,
   });
@@ -65,6 +65,6 @@ export async function uploadProfilePic(character, file) {
 }
 
 export async function fetchProfilePic(character) {
-  const res = await fetch(`http://localhost:8000/profile/profile_pic?character=${encodeURIComponent(character)}`);
+  const res = await fetch(`https://heroes-backend.onrender.com/profile/profile_pic?character=${encodeURIComponent(character)}`);
   return await res.json();
 }

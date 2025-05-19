@@ -1,0 +1,22 @@
+/* App.css - basic styles for your app */
+
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.typing-indicator {
+  color: #888;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
