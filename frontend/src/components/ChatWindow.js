@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import MessageInput from './MessageInput';
 import Notification from "./Notification";
 import FileUpload from './FileUpload';
-import ProfilePicUpload from "./ProfilePicUpload";
+import ProfilePicsUpload from "./ProfilePicsUpload";
 import { fetchMessages, sendMessage, saveMessage, fetchProfilePic } from '../utils/api';
 
 const ChatWindow = () => {
@@ -114,7 +114,7 @@ const ChatWindow = () => {
                         style={{ width: 48, height: 48, borderRadius: "50%", marginRight: 10, objectFit: "cover" }}
                     />
                 )}
-                <ProfilePicUpload character={character} onUpload={setProfilePic} />
+                <ProfilePicsUpload character={character} onUpload={setProfilePic} />
             </div>
             <div className="notifications">
                 {notifications.map((msg, idx) => (
